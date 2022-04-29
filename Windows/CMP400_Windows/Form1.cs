@@ -19,7 +19,7 @@ namespace CMP400_Windows
         public void InitBrowser()
         {
             Cef.Initialize(new CefSettings());
-            browser = new ChromiumWebBrowser("www.dylan-baker.software/cmp400/cmp400.php?access_token=FchjDfaEfCVEsfehG");
+            browser = new ChromiumWebBrowser("www.dylan-baker.software/cmp400/cmp400.php?access_token=");
             this.Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
         }
