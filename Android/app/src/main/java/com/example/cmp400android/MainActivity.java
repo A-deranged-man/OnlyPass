@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
         WebViewClientImpl webViewClient = new WebViewClientImpl(this);
         webView.setWebViewClient(webViewClient);
-        webView.loadUrl("https://www.dylan-baker.software/cmp400/cmp400.php?access_token=FchjDfaEfCVEsfehG");
+        webView.loadUrl("https://www.dylan-baker.software/cmp400/cmp400.php?access_token=");
     }
 
     @Override
