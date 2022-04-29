@@ -8,7 +8,7 @@ if($_SESSION["access"] === true){
         $password_data = json_decode($api->get_data($_SESSION["user_id"]));
 
         echo"<div class=\"container-fluid\"><br>
-<h5> Passwords:</h5><br><form action=\"../model/insert_data.php\" method=\"post\">
+<h5> Passwords:</h5><br><form name=\"addsite\" action=\"../model/insert_data.php\" onsubmit=\"return ValidateForm()\" method=\"post\">
                 <div class=\"form-group\">
                     <input type=\"text\" name=\"site_name\" class=\"form-control\" id=\"site_name\" placeholder=\"Enter a website name here\" width='50%'>
                 </div>
@@ -50,7 +50,15 @@ if($_SESSION["access"] === true){
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
         }
-    </script>";
+        
+        function ValidateForm() {
+        var x = document.forms[\"addsite\"][\"site_name\"].value;
+        if (x == \"\") {
+        alert(\"You must enter a site name\");
+        return false;
+            }
+        } 
+</script>";
         include("footer.php");
     }
 
